@@ -6,9 +6,9 @@ path = './data/'
 
 # 用户数据
 user_feature = pd.read_table(path + 'user_data', sep='\t',
-                             names=['uid', 'age', 'gender', 'area', 'marriages_state',
-                                    'education', 'consumption_ability', 'device',
-                                    'work', 'connection_type', 'behavior_id'])
+                             names=['uid', 'age', 'gender', 'area', 'status',
+                                    'education', 'consuptionAbility', 'device',
+                                    'work', 'connectionType', 'behavior'])
 # 广告静态数据
 ad_static_feature = pd.read_table(path + 'ad_static_feature.out',
                                   names=['aid', 'create_time', 'account_id', 'goods_id',
@@ -229,8 +229,8 @@ for col in ['aid', 'goods_id', 'account_id']:
 #################
 data.to_csv('preprocess_data/atest_track.csv', index=False)
 
-# row = ad_static_feature.iloc[0].values.tolist()
-# print(row)
+row = ad_operation.iloc[9].values.tolist()
+print(row)
 # print(user_static_feature[1])
 
 # if __name__ == "__main__":
